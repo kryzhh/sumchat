@@ -1,0 +1,20 @@
+# Optional Render Blueprint. In Render: New → Blueprint → pick this repo.
+# Free web service + an uptime pinger (see README). For an always-on bot
+# without a pinger, change `type: web` to `type: worker` and `plan: starter`.
+services:
+  - type: web
+    name: sumchat
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /
+    envVars:
+      - key: DISCORD_TOKEN
+        sync: false
+      - key: OPENROUTER_API_KEY
+        sync: false
+      - key: OPENROUTER_MODEL
+        value: openrouter/free
+      - key: GUILD_ID
+        sync: false

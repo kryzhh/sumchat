@@ -1,0 +1,19 @@
+{
+  "name": "sumchat",
+  "version": "1.0.0",
+  "description": "Discord bot that summarizes a channel's chat between two times using OpenRouter.",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "node --test test/"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "chrono-node": "^2.7.7",
+    "discord.js": "^14.16.3",
+    "dotenv": "^16.4.5"
+  }
+}
